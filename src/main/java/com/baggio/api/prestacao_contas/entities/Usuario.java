@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import com.baggio.api.prestacao_contas.enums.Perfil;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
@@ -15,6 +16,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
 @Table(name = "usuarios")
 @Data
 @NoArgsConstructor

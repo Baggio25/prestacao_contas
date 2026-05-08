@@ -4,7 +4,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 
-public record UsuarioDTO(
+public record UsuarioRequestDTO(
   Long id,  
 
   @NotBlank(message = "O [nome] é obrigatório")
@@ -14,9 +14,10 @@ public record UsuarioDTO(
   @NotBlank(message = "O [email] é obrigatório")
   @Email(message = "O [email] é inválido")
   String email,
+
+  @NotBlank(message = "A [senha] é obrigatória")
+  String senha,
   
   @NotBlank(message = "O [perfil] é obrigatório")
-  String perfil,
-
-  Boolean ativo
+  String perfil
 ) {}
